@@ -3,10 +3,10 @@
   --auxiliary-text-color: #757575;
   --white-text: #ffffff;
   --hover-color: #2196f3;
+  --hero-footer-color: #2f303a;
 }
 
 body {
-  background: #e5e5e5;
   color: var(--primery-text-color);
 
   font-family: 'Roboto', sans-serif;
@@ -20,6 +20,7 @@ body {
 /* #FFFFFF; білий */
 /* #2196F3; синій */
 /* rgba(255, 255, 255, 0.6);  колір mail, tel */
+/* #2F303A;  колір hero+footer */
 
 /* Logo */
 
@@ -64,21 +65,27 @@ body {
 .email,
 .tel {
   color: var(--auxiliary-text-color);
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   text-decoration: none;
 }
 
-.email,
+.email:hover,
+.email:focus {
+  color: var(--hover-color);
+}
+
 .tel:hover,
-.email,
 .tel:focus {
   color: var(--hover-color);
 }
 
 /* Hero */
-
+.hero {
+  background-color: var(--hero-footer-color);
+}
 .hero-title {
   color: var(--white-text);
 
@@ -187,10 +194,16 @@ body {
 
 /* footer*/
 
-.footer-map,
-.footer-mail,
-.footer-tel {
-  color: rgba(255, 255, 255, 0.6);
+.footer {
+  background-color: var(--hero-footer-color);
+}
+
+.footer-span {
+  color: var(--white-text);
+}
+
+.footer-map {
+  color: var(--white-text);
 
   font-size: 14px;
   line-height: 1.71;
@@ -198,11 +211,22 @@ body {
   font-style: normal;
 }
 
-.footer-map,
+.footer-map:hover,
+.footer-map:focus {
+  color: var(--hover-color);
+}
+
 .footer-mail,
+.footer-tel {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-mail:hover,
+.footer-mail:focus {
+  color: var(--hover-color);
+}
+
 .footer-tel:hover,
-.footer-map,
-.footer-mail,
 .footer-tel:focus {
-  color: var(--white-text);
+  color: var(--hover-color);
 }
